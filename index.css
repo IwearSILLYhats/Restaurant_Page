@@ -15,7 +15,7 @@ html, body{
     justify-content: flex-start;
 }
 .home{
-    display: flex;
+    display: none;
     flex-direction: column;
     text-align: center;
 }
@@ -24,7 +24,7 @@ html, body{
     height: 60vh;
     background-color: gray;
 }
-img{
+.logo{
     width: 8rem;
     height: 7rem;
 }
@@ -37,4 +37,30 @@ li{
 }
 li:hover{
     color: var(--strawberry);
+}
+.menu{
+    width: 80%;
+    margin: auto;
+    display: none;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+}
+.menu h1{
+    grid-column: 1 / -1;
+    text-align: center;
+}
+.menu img{
+    width: 5rem;
+    height: 5rem;
+    background-color: gray;
+}
+.description{
+    font-size: 80%;
+}
+.disclaimer::before{
+    content: '*';
+}
+.disclaimer{
+    font-size: 50%;
+    font-weight: bold;
 }
