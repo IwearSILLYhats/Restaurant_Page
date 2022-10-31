@@ -2,27 +2,42 @@
     --vanilla: #f7e2b3;
     --chocolate: #783c13;
     --strawberry: #c32f30;
+    font-family: Arial,Helvetica,sans-serif;
 }
 html, body{
     width: 100%;
     margin: 0;
     padding: 0;
+    background-color: #e1ffd3;
+}
+body{
+    padding-bottom: 3rem;
 }
 
 .nav{
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
+    font-weight: bold;
+    margin-bottom: 1rem;
 }
 .home{
-    display: none;
     flex-direction: column;
     text-align: center;
 }
-.hero{
+.home p{
+    margin: auto;
     width: 100%;
+    max-width: 800px;
+}
+.hero{
+    margin: auto;
+    position: relative;
+    width: 100%;
+    max-width: 800px;
     height: 60vh;
     background-color: gray;
+    overflow: hidden;
 }
 .logo{
     width: 8rem;
@@ -39,19 +54,29 @@ li:hover{
     color: var(--strawberry);
 }
 .menu{
+    display: flex;
+    flex-wrap: wrap;
     width: 80%;
     margin: auto;
-    display: none;
-    grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
+    justify-content: center;
+}
+.menu div{
+    width: 40%;
+    margin: 1rem;
+    display: block;
+    align-items: center;
+    text-align: center;
 }
 .menu h1{
-    grid-column: 1 / -1;
+    width: 100%;
     text-align: center;
 }
 .menu img{
-    width: 5rem;
-    height: 5rem;
+    border: 3px solid var(--chocolate);
+    border-radius: 50%;
+    width: 12rem;
+    height: 12rem;
     background-color: gray;
 }
 .description{
@@ -63,4 +88,83 @@ li:hover{
 .disclaimer{
     font-size: 50%;
     font-weight: bold;
+}
+.contact{
+    justify-content: center;
+    width: 70%;
+    margin: auto;
+}
+.wrapper{
+    display: block;
+}
+input, textarea{
+    margin: 0.5rem 0;
+    width: 100%;
+}
+label{
+    color: rgb(110, 110, 110);
+    display: block;
+}
+label::after{
+    content: '*';
+    font-size: 75%;
+}
+textarea{
+    width: 100%;
+    resize: vertical;
+}
+button{
+    margin-top: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 3px;
+    height: 2.5rem;
+    width: 7rem;
+}
+button:hover{
+    scale: 1.1;
+}
+.contact .name{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+.slide{
+    width: 100%;
+    max-width: 800px;
+    height: 60vh;
+    position: absolute;
+    transition: all 0.5s;
+}
+.slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.hero .btn{
+    color: black;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    z-index: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    font-size: 18px;
+}
+.slide .btn:active{
+transform: scale(1.1);
+}
+.btn-prev{
+    top: 45%;
+    left: 2%;
+}
+.btn-next{
+    top: 45%;
+    right: 2%;
 }
