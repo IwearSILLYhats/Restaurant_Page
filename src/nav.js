@@ -17,6 +17,7 @@ export default function nav (){
     buttons.forEach( (e) =>{
         const button = document.createElement('li')
         button.textContent = e.slice(0, 1).toUpperCase() + e.slice(1);
+        button.setAttribute('data-pointer', e);
         navbar.appendChild(button);
     })
 }
